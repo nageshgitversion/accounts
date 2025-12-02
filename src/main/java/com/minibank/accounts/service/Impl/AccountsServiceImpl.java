@@ -102,4 +102,13 @@ public class AccountsServiceImpl implements IAccountsService {
         customerRepository.deleteById(customer.getCustomerId());
         return true;
     }
+
+    @Override
+    public CustomerDto fetchCustomerDetailsByEmail(String email) {
+        Customer customer = customerRepository.findByEmail(email).orElseThrow(()->new handledResourceNotFoundException("customer","mobileNumber",email));
+        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(()->new handledResourceNotFoundException("Account","customerId",customer.getCustomerId().toString()));
+        CustomerDto customerDto = CustomerMapper.mapToCustomerDto(customer,new CustomerDto());
+        customerDto.setAccountsDto(AccountsMapper.mapToAccountsDto(accounts,new AccountsDto()));
+        return customerDto;
+    }
 }

@@ -11,4 +11,5 @@ public interface IAccountsService {
 
     public boolean deleteAccount(String mobileNumber);
 
+    CustomerDto fetchCustomerDetailsByEmail(String email);
 }
