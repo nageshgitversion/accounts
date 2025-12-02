@@ -69,4 +69,10 @@ public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam String mob
         }
     }
 
+    @GetMapping("/welcome")
+    public ResponseEntity<String> getData(@RequestParam String name){
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
