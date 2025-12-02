@@ -75,13 +75,10 @@ public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam String mob
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-<<<<<<< HEAD
-=======
     @GetMapping("/fetchbyemail")
     public ResponseEntity<CustomerDto> fetchCustomerDetailsByEmail(@RequestParam String email){
         CustomerDto customerDto = iservice.fetchCustomerDetailsByEmail(email);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(customerDto);
     }
->>>>>>> cd5745a (new api created for findbyemail)
 }
