@@ -42,7 +42,7 @@ public class CustomerDto {
         this.mobileNumber = mobileNumber;
     }
 
-    @Pattern(regexp = "(^$|[0-9]{10})",message = "mobile number length should be 10")
+    @Pattern(regexp = "(^$|[0-9]{9})",message = "mobile number length should be 10")
     private String mobileNumber;
 
     public AccountsDto getAccountsDto() {
