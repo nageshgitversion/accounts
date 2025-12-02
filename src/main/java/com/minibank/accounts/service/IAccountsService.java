@@ -11,4 +11,6 @@ public interface IAccountsService {
 
     public boolean deleteAccount(String mobileNumber);
 
+    public void test();
+
 }
