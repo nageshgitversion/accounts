@@ -68,10 +68,5 @@ public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam String mob
                     .body(new ResponseDto(AccountConstants.STATUS_417, AccountConstants.MESSAGE_417_DELETE));
         }
     }
-
-    @GetMapping("/welcome")
-    public ResponseEntity<String> getData(@RequestParam String name){
-
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+    
 }
