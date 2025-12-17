@@ -43,7 +43,7 @@ public class AccountsServiceImpl implements IAccountsService {
         customer.setCreatedBy("User");
         Customer savedCustomer = customerRepository.save(customer);
         accountsRepository.save(createNewAccount(savedCustomer));
-        System.out.println("hello everyone");
+        System.out.println("hello every");
 
     }
 
